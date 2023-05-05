@@ -12,7 +12,7 @@ contract OUSDT is ERC20 {
 
     function requestTokens(address requestor , uint amount) external {
         // require(block.timestamp > lockTime[msg.sender], "lock time has not expired. Please try again later");
-        _mint(requestor, amount * (10 ** 18));
-        // lockTime[msg.sender] = block.timestamp + 1 days;
+        _mint(requestor, amount);
+        // lockTime[requestor] = block.timestamp + 1 hours;
     }
 }
